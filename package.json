@@ -1,0 +1,21 @@
+{
+  "name": "nihongo-jouzu",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/ui": "^2.13.0",
+    "eslint": "^9.3.0",
+    "nuxt": "^3.10.1"
+  }
+}
