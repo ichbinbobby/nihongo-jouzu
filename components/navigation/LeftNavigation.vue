@@ -18,19 +18,7 @@ const links = [
     label: "Verbs",
     icon: "i-heroicons-home",
     to: "/verbs/overview",
-  },
-  {
-    label: "Vertical Navigation",
-    icon: "i-heroicons-chart-bar",
-    to: `${
-      route.path.startsWith("/dev") ? "/dev" : ""
-    }/components/vertical-navigation`,
-  },
-  {
-    label: "Command Palette",
-    icon: "i-heroicons-command-line",
-    to: "/components/command-palette",
-  },
+  }
 ];
 </script>
 
