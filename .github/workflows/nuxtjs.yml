@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -66,7 +69,11 @@ jobs:
         env:
           NITRO_PRESET: github-pages
       - name: Github Pages Prepare
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
           npx gh-pages --dotfiles --dist .output/public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
