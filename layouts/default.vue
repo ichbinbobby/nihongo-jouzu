@@ -2,9 +2,7 @@
   <UCard>
     <template #header>
       <div class="w3-row">
-        <div class="w3-col m3 w3-left-align">
-          <NuxtLink to="/">Home</NuxtLink>
-        </div>
+        <div class="w3-col m3 w3-left-align"/>
 
         <div class="w3-col m6 w3-center">Header</div>
 
